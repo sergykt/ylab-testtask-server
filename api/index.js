@@ -50,7 +50,7 @@ app.post('/api/users/signup', async (req, res) => {
       html: htmlBody,
     });
 
-    return res.status(200).end();
+    return res.status(201).end();
   } catch (err) {
     console.error(err);
     return res.status(500).end();
