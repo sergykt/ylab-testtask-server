@@ -29,10 +29,10 @@ app.post('/api/users/login', async (req, res) => {
     const { email } = data;
 
     const htmlBody = (
-      <>
+      <div>
         <h1>Hello!</h1>
         <p>This email is to confirm that your recent login attempt was successful. If this wasn't you, please contact us immediately.</p>
-      </>
+      </div>
     );
 
     await transporter.sendMail({
