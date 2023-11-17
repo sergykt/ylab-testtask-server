@@ -28,12 +28,8 @@ app.post('/api/users/login', async (req, res) => {
     const data = req.body;
     const { email } = data;
 
-    const htmlBody = (
-      <div>
-        <h1>Hello!</h1>
-        <p>This email is to confirm that your recent login attempt was successful. If this wasn't you, please contact us immediately.</p>
-      </div>
-    );
+    const htmlBody = `<h1>Hello!</h1>
+    <p>This email is to confirm that your recent login attempt was successful. If this wasn't you, please contact us immediately.</p>`;
 
     await transporter.sendMail({
       from: process.env.SMTP_EMAIL,
