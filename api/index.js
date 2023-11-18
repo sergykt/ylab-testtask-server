@@ -38,8 +38,9 @@ app.post('/api/users/login', async (req, res) => {
     //   text: '',
     //   html: htmlBody,
     // });
-
-    return res.status(200).send('Success!');
+    setTimeout(() => {
+      return res.status(200).send('Success!');
+    }, 2500)
   } catch (err) {
     console.error(err);
     return res.status(500).end();
