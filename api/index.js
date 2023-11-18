@@ -40,7 +40,7 @@ app.post('/api/users/login', async (req, res) => {
     // });
     setTimeout(() => {
       return res.status(200).send('Success!');
-    }, 2500)
+    }, 2000)
   } catch (err) {
     console.error(err);
     return res.status(500).end();
